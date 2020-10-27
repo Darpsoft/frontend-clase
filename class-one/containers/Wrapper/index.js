@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
-
 const { Header, Content, Footer } = Layout;
 
 const Wrapper = ({ children }) => {
@@ -19,7 +18,7 @@ const Wrapper = ({ children }) => {
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>Login</Breadcrumb.Item>
           </Breadcrumb>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+          <div style={{ padding: 24, minHeight: 380 }}>
             {children}
           </div>
         </Content>

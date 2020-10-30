@@ -61,10 +61,23 @@ const Login = () => {
     setState({ email: values.target.value });
   };
   const initialRequest = async () => {
-    const request = await fetch("https://jsonplaceholder.typicode.com/users")
+    const form = {
+      username: "pedro",
+      password: "56456A4SD5A456SD",
+    };
+    const url = "https://jsonplaceholder.typicode.com/users";
+    const option = {
+      method: "POST",
+      body: JSON.stringify(form),
+    };
+
+    const request = await fetch(url, option)
       .then((values) => values.json())
-      .then((values) => console.log(values));
+      .then((values) => values);
+
+    console.log(request);
   };
+
   const dismountComponent = () => {
     console.log("SE DESMONTÓ EL COMPONENTE");
   };
